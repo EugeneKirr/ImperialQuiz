@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionDetailsDescriptionCell" id="aHz-8g-gzg" customClass="SectionDetailsDescriptionCell" customModule="ImperialQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BAX-hs-ozr">
+                <rect key="frame" x="0.0" y="0.0" width="206" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvC-Fz-k5I">
+                        <rect key="frame" x="8" y="8" width="190" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDj-rH-Lfi">
+                        <rect key="frame" x="8" y="40" width="190" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SDj-rH-Lfi" secondAttribute="trailing" constant="8" id="9Lb-px-fXl"/>
+                    <constraint firstAttribute="trailing" secondItem="VvC-Fz-k5I" secondAttribute="trailing" constant="8" id="B91-p4-MlO"/>
+                    <constraint firstItem="VvC-Fz-k5I" firstAttribute="top" secondItem="BAX-hs-ozr" secondAttribute="top" constant="8" id="BvZ-PG-bIL"/>
+                    <constraint firstItem="SDj-rH-Lfi" firstAttribute="top" secondItem="VvC-Fz-k5I" secondAttribute="bottom" constant="8" id="CNl-YX-fJY"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SDj-rH-Lfi" secondAttribute="bottom" constant="8" id="WVv-Ni-E5q"/>
+                    <constraint firstItem="SDj-rH-Lfi" firstAttribute="leading" secondItem="BAX-hs-ozr" secondAttribute="leading" constant="8" id="htV-pB-3KQ"/>
+                    <constraint firstItem="VvC-Fz-k5I" firstAttribute="leading" secondItem="BAX-hs-ozr" secondAttribute="leading" constant="8" id="jKN-2l-0SF"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="206" height="149"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="SDj-rH-Lfi" id="rvS-Ja-w9A"/>
+                <outlet property="titleLabel" destination="VvC-Fz-k5I" id="kgV-Bw-asW"/>
+            </connections>
+            <point key="canvasLocation" x="186.95652173913044" y="74.665178571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

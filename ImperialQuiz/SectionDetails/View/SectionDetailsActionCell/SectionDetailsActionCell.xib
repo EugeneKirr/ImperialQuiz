@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionDetailsActionCell" id="2IR-pC-ffE" customClass="SectionDetailsActionCell" customModule="ImperialQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PlY-Nz-Dtp">
+                <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-ru-PCr">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sgo-ru-PCr" firstAttribute="top" secondItem="PlY-Nz-Dtp" secondAttribute="top" id="Q6m-Xt-HV1"/>
+                    <constraint firstItem="Sgo-ru-PCr" firstAttribute="leading" secondItem="PlY-Nz-Dtp" secondAttribute="leading" id="Uki-j1-vqr"/>
+                    <constraint firstAttribute="trailing" secondItem="Sgo-ru-PCr" secondAttribute="trailing" id="XRv-gw-o17"/>
+                    <constraint firstAttribute="bottom" secondItem="Sgo-ru-PCr" secondAttribute="bottom" id="lsP-M8-ylX"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="166" height="48"/>
+            <connections>
+                <outlet property="actionLabel" destination="Sgo-ru-PCr" id="u3s-GV-AT8"/>
+            </connections>
+            <point key="canvasLocation" x="102.89855072463769" y="89.0625"/>
+        </collectionViewCell>
+    </objects>
+</document>
