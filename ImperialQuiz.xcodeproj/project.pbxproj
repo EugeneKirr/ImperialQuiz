@@ -12,6 +12,8 @@
 		0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
 		0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306DB246A7CE300287CAF /* DetailsSections.swift */; };
+		0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */; };
+		0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48F246C290A0004F165 /* ProjectCategories.swift */; };
 		0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B72E109246872E5008E387B /* OrksImages.xcassets */; };
 		0B72E10D2468747C008E387B /* QuizUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72E10C2468747C008E387B /* QuizUnit.swift */; };
 		0B72E10F246875AD008E387B /* QuizUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72E10E246875AD008E387B /* QuizUnitManager.swift */; };
@@ -69,6 +71,8 @@
 		0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewDataSourceExtensions.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
 		0B2306DB246A7CE300287CAF /* DetailsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSections.swift; sourceTree = "<group>"; };
+		0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
+		0B4CA48F246C290A0004F165 /* ProjectCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCategories.swift; sourceTree = "<group>"; };
 		0B72E109246872E5008E387B /* OrksImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OrksImages.xcassets; sourceTree = "<group>"; };
 		0B72E10C2468747C008E387B /* QuizUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizUnit.swift; sourceTree = "<group>"; };
 		0B72E10E246875AD008E387B /* QuizUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizUnitManager.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 			children = (
 				0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */,
 				0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */,
+				0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 			children = (
 				0BF60C5724630A1600C74E9E /* ProjectVCs.swift */,
 				0B7CBA052463F58A00046569 /* ProjectCells.swift */,
+				0B4CA48F246C290A0004F165 /* ProjectCategories.swift */,
 				0B2306DB246A7CE300287CAF /* DetailsSections.swift */,
 				0B2306D9246A7CB100287CAF /* QuizSections.swift */,
 			);
@@ -503,6 +509,7 @@
 			files = (
 				0BF60C5824630A1600C74E9E /* ProjectVCs.swift in Sources */,
 				0BD6145E2465918200638E21 /* SectionDetailsViewController.swift in Sources */,
+				0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */,
 				0BD950002463259C0058CD72 /* SectionListCell.swift in Sources */,
 				0BD614812466E0A400638E21 /* SectionQuizOptionCell.swift in Sources */,
 				0BA5621524655696009809E7 /* UIViewControllerExtensions.swift in Sources */,
@@ -511,6 +518,7 @@
 				0BD614792465A99A00638E21 /* SectionDetailsDataProvider.swift in Sources */,
 				0BF60C5A24630D0E00C74E9E /* SectionListDataProvider.swift in Sources */,
 				0B74A5442467EA0100B0840E /* SectionDetailsGalleryCell.swift in Sources */,
+				0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */,
 				0BD6146B2465A06200638E21 /* SectionQuizDataProvider.swift in Sources */,
 				0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */,
 				0BD614722465A59500638E21 /* NavigationDelegate.swift in Sources */,

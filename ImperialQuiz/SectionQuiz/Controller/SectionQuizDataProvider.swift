@@ -16,8 +16,8 @@ class SectionQuizDataProvider: NSObject {
     
     var sectionTitle = "" {
         didSet {
-            lastRound = quizManager.prepareQuizUnits(for: sectionTitle)
-            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound)
+            lastRound = quizManager.fetchQuizRoundsCount(for: sectionTitle)
+            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound, numberOfOptions: 4)
         }
     }
     
@@ -26,7 +26,7 @@ class SectionQuizDataProvider: NSObject {
     var quizRound = 0 {
         didSet {
             guard quizRound < (lastRound) else { return }
-            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound)
+            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound, numberOfOptions: 4)
         }
     }
     
@@ -56,7 +56,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
         let quizSection = QuizSections(section)
         switch quizSection {
         case .image: return 1
-        case .options: return 4
+        case .options: return roundOptions.count
         case .confirm: return 1
         }
     }
@@ -87,7 +87,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
     // MARK: - Delegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let quizSection = QuizSections(rawValue: indexPath.section) else { return }
+        let quizSection = QuizSections(indexPath.section)
         switch quizSection {
         case .image: return
         case .options:
@@ -111,7 +111,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
 extension SectionQuizDataProvider: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let quizSection = QuizSections(rawValue: indexPath.section) else { return CGSize(width: 1, height: 1) }
+        let quizSection = QuizSections(indexPath.section)
         switch quizSection {
         case .image: return CGSize(width: collectionView.bounds.width, height: 0.5 * collectionView.bounds.height)
         case .options: return CGSize(width: collectionView.bounds.width, height: 0.1 * collectionView.bounds.height)

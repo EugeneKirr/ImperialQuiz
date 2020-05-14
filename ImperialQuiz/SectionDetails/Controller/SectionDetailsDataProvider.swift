@@ -55,7 +55,7 @@ extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionView
     // MARK: - Delegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let detailsSection = DetailsSections(rawValue: indexPath.section) else { return }
+        let detailsSection = DetailsSections(indexPath.section)
         switch detailsSection {
         case .gallery, .description: return
         case .actions:
@@ -71,7 +71,7 @@ extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionView
 extension SectionDetailsDataProvider: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let detailsSection = DetailsSections(rawValue: indexPath.section) else { return CGSize(width: 1, height: 1) }
+        let detailsSection = DetailsSections(indexPath.section)
         switch detailsSection {
         case .gallery: return CGSize(width: collectionView.bounds.width, height: 0.5 * collectionView.bounds.height)
         case .description: return CGSize(width: collectionView.bounds.width, height: 0.4 * collectionView.bounds.height)

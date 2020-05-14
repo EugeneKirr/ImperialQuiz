@@ -15,7 +15,7 @@ class SectionListDataProvider: NSObject {
     weak var delegate: NavigationDelegate?
     
     var currentSections: [Section] {
-        return sectionManager.fetchDefaultSections()
+        return sectionManager.fetchSections()
     }
     
 }
