@@ -16,31 +16,45 @@ class SectionQuizDataProvider: NSObject {
     
     var sectionTitle = "" {
         didSet {
-            lastRound = quizManager.fetchQuizRoundsCount(for: sectionTitle)
-            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound, numberOfOptions: 4)
+            quizManager.prepareQuizUnits(for: sectionTitle)
+            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
         }
     }
     
-    var lastRound = 0
-    
-    var quizRound = 0 {
+    var totalRounds: Int {
+        return quizManager.fetchQuizRoundsCount()
+    }
+    var currentRound = 0 {
         didSet {
-            guard quizRound < (lastRound) else { return }
-            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: quizRound, numberOfOptions: 4)
+            guard currentRound < totalRounds else { return }
+            (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
         }
     }
+    var correctCount = 0
+    var wrongCount = 0
     
     var roundImage: UIImage {
-        return quizManager.fetchRoundImage(quizRound: quizRound)
+        return quizManager.fetchRoundImage(quizRound: currentRound)
     }
-
     var roundOptions = [String]()
     
     var validOptionIndex: Int?
-    
     var chosenOptionIndex: Int?
 
-    var isConfirmTapped = false
+    var isConfirmTapped = false {
+        didSet {
+            guard !isConfirmTapped else {
+                if (chosenOptionIndex == validOptionIndex) {
+                    correctCount += 1
+                } else {
+                    wrongCount += 1
+                }
+                return
+            }
+            currentRound += 1
+            chosenOptionIndex = nil
+        }
+    }
     
 }
 
@@ -67,6 +81,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
         case .image:
             return configureReusableProjectCell(collectionView, indexPath, .sectionQuizImageCell) { (cell: SectionQuizImageCell) in
                 cell.quizImageView.image = roundImage
+                cell.loadCounter(correct: correctCount, wrong: wrongCount, current: (currentRound + 1), total: totalRounds)
             }
         case .options:
             return configureReusableProjectCell(collectionView, indexPath, .sectionQuizOptionCell) { (cell: SectionQuizOptionCell) in
@@ -78,7 +93,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
             }
         case .confirm:
             return configureReusableProjectCell(collectionView, indexPath, .sectionQuizActionCell) { (cell: SectionQuizActionCell) in
-                let actionLabel = quizRound < (lastRound - 1) ? "Next" : "Finish"
+                let actionLabel = currentRound < (totalRounds - 1) ? "Next" : "Finish"
                 cell.quizActionLabel.text = isConfirmTapped ? actionLabel : "Confirm"
             }
         }
@@ -97,11 +112,13 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
         case .confirm:
             guard chosenOptionIndex != nil else { return }
             isConfirmTapped = !isConfirmTapped
-            if !isConfirmTapped {
-                quizRound += 1
-                chosenOptionIndex = nil
+            guard currentRound < totalRounds else {
+                let sectionManager = SectionManager()
+                let newSectionRating = 5 * correctCount / totalRounds
+                sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle)
+                delegate?.popToRootVC()
+                return
             }
-            guard quizRound < (lastRound) else { delegate?.popToRootVC(); return }
             collectionView.reloadData()
         }
     }

@@ -14,12 +14,14 @@ struct Section: Equatable {
     let listImage: UIImage
     let description: String
     let galleryImages: [UIImage]
+    let rating: Int
     
-    init(title: String, listImage: UIImage = UIImage(named: "Default")!, description: String = "", galleryImages: [UIImage] = [UIImage]() ) {
+    init(title: String, listImage: UIImage = UIImage(named: "Default")!, description: String = "", galleryImages: [UIImage] = [UIImage](), rating: Int = 0) {
         self.title = title
         self.listImage = listImage
         self.description = description
         self.galleryImages = galleryImages
+        self.rating = rating
     }
     
 }

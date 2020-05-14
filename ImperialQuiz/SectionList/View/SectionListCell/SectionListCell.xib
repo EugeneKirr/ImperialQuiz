@@ -25,9 +25,17 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFV-Jq-6zS">
+                        <rect key="frame" x="313" y="76" width="93" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="IFV-Jq-6zS" secondAttribute="trailing" constant="8" id="0VR-ye-tXV"/>
                     <constraint firstItem="Aao-iL-KFs" firstAttribute="leading" secondItem="wNg-cN-nM9" secondAttribute="leading" id="3i0-Oj-qU9"/>
+                    <constraint firstAttribute="bottom" secondItem="IFV-Jq-6zS" secondAttribute="bottom" constant="8" id="6KH-KC-8ZU"/>
                     <constraint firstAttribute="trailing" secondItem="Aao-iL-KFs" secondAttribute="trailing" id="BKC-En-6nS"/>
                     <constraint firstAttribute="bottom" secondItem="Aao-iL-KFs" secondAttribute="bottom" id="Fe0-dy-ATm"/>
                     <constraint firstItem="Aao-iL-KFs" firstAttribute="top" secondItem="wNg-cN-nM9" secondAttribute="top" id="HE5-NX-pvJ"/>
@@ -37,6 +45,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="414" height="120"/>
             <connections>
+                <outlet property="ratingLabel" destination="IFV-Jq-6zS" id="zxJ-MQ-DJY"/>
                 <outlet property="sectionImageView" destination="Aao-iL-KFs" id="zlV-VZ-7wO"/>
                 <outlet property="titleLabel" destination="XvD-xq-cms" id="asg-kj-qht"/>
             </connections>

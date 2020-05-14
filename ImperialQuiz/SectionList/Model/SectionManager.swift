@@ -17,8 +17,8 @@ class SectionManager {
     private let orksImages = [UIImage(named:"orks_gallery_0")!, UIImage(named:"orks_gallery_1")!, UIImage(named:"orks_gallery_2")!, UIImage(named:"orks_gallery_3")!, UIImage(named:"orks_gallery_4")!]
     
     private func fetchDefaultSections() -> [Section] {
-        let orksSection = Section(title: "Orks", listImage: UIImage(named:"orks_list")!, description: orksDescription, galleryImages: orksImages)
-        let smSection = Section(title: "Space Marines", listImage: UIImage(named:"sm_list")!, description: smDescription, galleryImages: smImages)
+        let orksSection = Section(title: "Orks", listImage: UIImage(named:"orks_list")!, description: orksDescription, galleryImages: orksImages, rating: 0)
+        let smSection = Section(title: "Space Marines", listImage: UIImage(named:"sm_list")!, description: smDescription, galleryImages: smImages, rating: 0)
         return [smSection, orksSection]
     }
     
@@ -53,6 +53,7 @@ extension SectionManager {
                 galleryImageNames.append(imageName)
             }
             dict["galleryImageNames"] = galleryImageNames
+            dict["rating"] = section.rating
             dicts.append(dict)
         }
         return dicts
@@ -108,8 +109,23 @@ extension SectionManager {
             }
             return galleryImages
         }()
-        let section = Section(title: title, listImage: listImage, description: description, galleryImages: galleryImages)
+        let rating = dictionary["rating"] as? Int ?? 0
+        let section = Section(title: title, listImage: listImage, description: description, galleryImages: galleryImages, rating: rating)
         return section
     }
 
+}
+
+extension SectionManager {
+    
+    func updateSectionRating(with newValue: Int, sectionTitle: String) {
+        guard let plistData = try? Data(contentsOf: sectionsPlistURL),
+              var dicts = try? PropertyListSerialization.propertyList(from: plistData, options: [], format: nil) as? [[String : Any]],
+              let index = dicts.firstIndex(where: { $0["title"] as? String == sectionTitle }),
+              let oldValue = dicts[index]["rating"] as? Int, oldValue < newValue else { return }
+        dicts[index].updateValue(newValue, forKey: "rating")
+        guard let updatedPlistData = try? PropertyListSerialization.data(fromPropertyList: dicts, format: .xml, options: .zero) else { fatalError() }
+        try? updatedPlistData.write(to: sectionsPlistURL, options: .atomic)
+    }
+    
 }

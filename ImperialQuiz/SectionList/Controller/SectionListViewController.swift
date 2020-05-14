@@ -26,5 +26,10 @@ class SectionListViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .darkText
         navigationItem.title = "Section List"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
 
 }

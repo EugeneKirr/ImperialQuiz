@@ -53,12 +53,11 @@ class QuizUnitManager {
     
 extension QuizUnitManager {
     
-    func fetchQuizRoundsCount(for sectionTitle: String) -> Int {
-        prepareQuizUnits(for: sectionTitle)
+    func fetchQuizRoundsCount() -> Int {
         return quizUnits.count
     }
     
-    private func prepareQuizUnits(for sectionTitle: String) {
+    func prepareQuizUnits(for sectionTitle: String) {
         var preparedUnits = [QuizUnit]()
         let unitsPlistURL = FileManager.default.getUnitsPlistURL(sectionTitle: sectionTitle)
         guard let plistData = try? Data(contentsOf: unitsPlistURL),
