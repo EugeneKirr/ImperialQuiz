@@ -25,10 +25,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCq-mE-d4J">
+                        <rect key="frame" x="8" y="4" width="33" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="44O-Kj-04d" firstAttribute="top" secondItem="zwQ-OI-cEI" secondAttribute="top" constant="8" id="MGC-lI-VeX"/>
+                    <constraint firstItem="qCq-mE-d4J" firstAttribute="top" secondItem="zwQ-OI-cEI" secondAttribute="top" constant="4" id="OqY-OK-SpE"/>
                     <constraint firstItem="Zpi-u9-PYt" firstAttribute="top" secondItem="zwQ-OI-cEI" secondAttribute="top" constant="4" id="ShF-nR-h1q"/>
+                    <constraint firstItem="qCq-mE-d4J" firstAttribute="leading" secondItem="zwQ-OI-cEI" secondAttribute="leading" constant="8" id="TZO-jr-mKu"/>
                     <constraint firstAttribute="trailing" secondItem="44O-Kj-04d" secondAttribute="trailing" constant="8" id="cuC-oP-5KZ"/>
                     <constraint firstAttribute="bottom" secondItem="44O-Kj-04d" secondAttribute="bottom" constant="8" id="tJO-1P-ffA"/>
                     <constraint firstAttribute="trailing" secondItem="Zpi-u9-PYt" secondAttribute="trailing" constant="4" id="xIi-lR-rmy"/>
@@ -39,6 +47,7 @@
             <connections>
                 <outlet property="countLabel" destination="Zpi-u9-PYt" id="gaR-Z0-WKW"/>
                 <outlet property="quizImageView" destination="44O-Kj-04d" id="hDR-w2-8dR"/>
+                <outlet property="timerLabel" destination="qCq-mE-d4J" id="VlM-57-i9i"/>
             </connections>
             <point key="canvasLocation" x="154.34782608695653" y="102.45535714285714"/>
         </collectionViewCell>

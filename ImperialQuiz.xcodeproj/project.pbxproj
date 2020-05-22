@@ -12,6 +12,7 @@
 		0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
 		0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306DB246A7CE300287CAF /* DetailsSections.swift */; };
+		0B2F82042477E11D00297693 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F82032477E11D00297693 /* attachment.png */; };
 		0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */; };
 		0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48F246C290A0004F165 /* ProjectCategories.swift */; };
 		0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B72E109246872E5008E387B /* OrksImages.xcassets */; };
@@ -30,6 +31,7 @@
 		0B88E94724680B8F00EE2CE2 /* GalleryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88E94624680B8F00EE2CE2 /* GalleryDataProvider.swift */; };
 		0B88E94A2468479900EE2CE2 /* GalleryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B88E9492468479900EE2CE2 /* GalleryImageCell.xib */; };
 		0B88E94C2468480F00EE2CE2 /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88E94B2468480F00EE2CE2 /* GalleryImageCell.swift */; };
+		0B90B1F4247673A80009651D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90B1F3247673A80009651D /* NotificationManager.swift */; };
 		0BA5621524655696009809E7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */; };
 		0BBE4A6224671C2400A6E30A /* SectionQuizActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBE4A6124671C2300A6E30A /* SectionQuizActionCell.xib */; };
 		0BBE4A6424671CC700A6E30A /* SectionQuizActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE4A6324671CC700A6E30A /* SectionQuizActionCell.swift */; };
@@ -71,6 +73,7 @@
 		0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewDataSourceExtensions.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
 		0B2306DB246A7CE300287CAF /* DetailsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSections.swift; sourceTree = "<group>"; };
+		0B2F82032477E11D00297693 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attachment.png; path = "../../../../../Desktop/ImperialQuiz Assets/Sources/attachment.png"; sourceTree = "<group>"; };
 		0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 		0B4CA48F246C290A0004F165 /* ProjectCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCategories.swift; sourceTree = "<group>"; };
 		0B72E109246872E5008E387B /* OrksImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OrksImages.xcassets; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		0B88E94624680B8F00EE2CE2 /* GalleryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataProvider.swift; sourceTree = "<group>"; };
 		0B88E9492468479900EE2CE2 /* GalleryImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryImageCell.xib; sourceTree = "<group>"; };
 		0B88E94B2468480F00EE2CE2 /* GalleryImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
+		0B90B1F3247673A80009651D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0BBE4A6124671C2300A6E30A /* SectionQuizActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionQuizActionCell.xib; sourceTree = "<group>"; };
 		0BBE4A6324671CC700A6E30A /* SectionQuizActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionQuizActionCell.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		0B83CACA2462A8F3002986A0 /* ImperialQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				0B90B1F22476738C0009651D /* Notifications */,
 				0BF60C56246309FF00C74E9E /* Enums */,
 				0BD614702465A55C00638E21 /* Protocols */,
 				0BA562132465567F009809E7 /* Extensions */,
@@ -232,6 +237,15 @@
 				0B88E94B2468480F00EE2CE2 /* GalleryImageCell.swift */,
 			);
 			path = GalleryImageCell;
+			sourceTree = "<group>";
+		};
+		0B90B1F22476738C0009651D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				0B2F82032477E11D00297693 /* attachment.png */,
+				0B90B1F3247673A80009651D /* NotificationManager.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		0BA562132465567F009809E7 /* Extensions */ = {
@@ -485,6 +499,7 @@
 				0BD6146924659E3200638E21 /* SectionQuiz.storyboard in Resources */,
 				0B74A5472467ECBA00B0840E /* SectionDetailsActionCell.xib in Resources */,
 				0BC95AF424658EC800A23C2F /* SectionDetails.storyboard in Resources */,
+				0B2F82042477E11D00297693 /* attachment.png in Resources */,
 				0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */,
 				0B74A5422467E9A900B0840E /* SectionDetailsGalleryCell.xib in Resources */,
 				0B83CAD32462A8F3002986A0 /* SectionList.storyboard in Resources */,
@@ -529,6 +544,7 @@
 				0BBE4A6424671CC700A6E30A /* SectionQuizActionCell.swift in Sources */,
 				0BD6147F2466DDA700638E21 /* SectionQuizImageCell.swift in Sources */,
 				0B88E94724680B8F00EE2CE2 /* GalleryDataProvider.swift in Sources */,
+				0B90B1F4247673A80009651D /* NotificationManager.swift in Sources */,
 				0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */,
 				0BF60C54246304EA00C74E9E /* SectionListViewController.swift in Sources */,
 				0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */,

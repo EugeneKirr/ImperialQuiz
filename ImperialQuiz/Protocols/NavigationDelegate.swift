@@ -15,5 +15,7 @@ protocol NavigationDelegate: AnyObject {
     func popToParentVC()
     
     func popToRootVC()
+    
+    func showFinishAlert(newRating: Int)
 
 }

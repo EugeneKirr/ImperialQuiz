@@ -38,3 +38,17 @@ extension UIViewController: NavigationDelegate {
     }
     
 }
+
+extension UIViewController {
+    
+    func showFinishAlert(newRating: Int) {
+        let titleEnding = (newRating > 0) ? String(repeating: "★", count: newRating) : "None"
+        let ac = UIAlertController(title: "Your rating\n" + titleEnding, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { [weak self] (_) in
+            self?.popToRootVC()
+        }
+        ac.addAction(ok)
+        present(ac, animated: true, completion: nil)
+    }
+    
+}

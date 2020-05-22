@@ -118,7 +118,7 @@ extension SectionManager {
 
 extension SectionManager {
     
-    func updateSectionRating(with newValue: Int, sectionTitle: String) {
+    func updateSectionRating(with newValue: Int, sectionTitle: String, successCompletion: (() -> Void)? ) {
         guard let plistData = try? Data(contentsOf: sectionsPlistURL),
               var dicts = try? PropertyListSerialization.propertyList(from: plistData, options: [], format: nil) as? [[String : Any]],
               let index = dicts.firstIndex(where: { $0["title"] as? String == sectionTitle }),
@@ -126,6 +126,7 @@ extension SectionManager {
         dicts[index].updateValue(newValue, forKey: "rating")
         guard let updatedPlistData = try? PropertyListSerialization.data(fromPropertyList: dicts, format: .xml, options: .zero) else { fatalError() }
         try? updatedPlistData.write(to: sectionsPlistURL, options: .atomic)
+        successCompletion?()
     }
     
 }

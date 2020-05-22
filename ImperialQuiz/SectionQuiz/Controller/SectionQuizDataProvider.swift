@@ -12,6 +12,8 @@ class SectionQuizDataProvider: NSObject {
     
     private let quizManager = QuizUnitManager()
     
+    private let notificationManager = NotificationManager()
+    
     weak var delegate: NavigationDelegate?
     
     var sectionTitle = "" {
@@ -82,6 +84,10 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
             return configureReusableProjectCell(collectionView, indexPath, .sectionQuizImageCell) { (cell: SectionQuizImageCell) in
                 cell.quizImageView.image = roundImage
                 cell.loadCounter(correct: correctCount, wrong: wrongCount, current: (currentRound + 1), total: totalRounds)
+                guard !isConfirmTapped else { return }
+                cell.startTimer(count: 10) { [weak self] in
+                    self?.isConfirmTapped = true
+                }
             }
         case .options:
             return configureReusableProjectCell(collectionView, indexPath, .sectionQuizOptionCell) { (cell: SectionQuizOptionCell) in
@@ -110,13 +116,16 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
             chosenOptionIndex = indexPath.row
             collectionView.reloadSections([QuizSections.options.rawValue])
         case .confirm:
-            guard chosenOptionIndex != nil else { return }
+            guard (chosenOptionIndex != nil) || (isConfirmTapped) else { return }
             isConfirmTapped = !isConfirmTapped
             guard currentRound < totalRounds else {
                 let sectionManager = SectionManager()
                 let newSectionRating = 5 * correctCount / totalRounds
-                sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle)
-                delegate?.popToRootVC()
+                sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle) { [weak self] in
+                    guard let self = self else { return }
+                    self.notificationManager.scheduleInstantLocalNotification(title: self.sectionTitle, rating: newSectionRating)
+                }
+                delegate?.showFinishAlert(newRating: newSectionRating)
                 return
             }
             collectionView.reloadData()
