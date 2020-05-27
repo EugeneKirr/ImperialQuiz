@@ -12,8 +12,6 @@ class SectionQuizDataProvider: NSObject {
     
     private let quizManager = QuizUnitManager()
     
-    private let notificationManager = NotificationManager()
-    
     weak var delegate: NavigationDelegate?
     
     var sectionTitle = "" {
@@ -85,8 +83,9 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
                 cell.quizImageView.image = roundImage
                 cell.loadCounter(correct: correctCount, wrong: wrongCount, current: (currentRound + 1), total: totalRounds)
                 guard !isConfirmTapped else { return }
-                cell.startTimer(count: 10) { [weak self] in
+                cell.startTimer(count: 20) { [weak self, weak collectionView] in
                     self?.isConfirmTapped = true
+                    collectionView?.reloadData()
                 }
             }
         case .options:
@@ -123,7 +122,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
                 let newSectionRating = 5 * correctCount / totalRounds
                 sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle) { [weak self] in
                     guard let self = self else { return }
-                    self.notificationManager.scheduleInstantLocalNotification(title: self.sectionTitle, rating: newSectionRating)
+                    NotificationManager.shared.scheduleTopRatingLocalNotification(title: self.sectionTitle, rating: newSectionRating)
                 }
                 delegate?.showFinishAlert(newRating: newSectionRating)
                 return

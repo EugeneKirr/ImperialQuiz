@@ -47,3 +47,13 @@ extension FileManager {
     }
     
 }
+
+extension FileManager {
+    
+    func deleteSectionAssociatedFiles(sectionTitle: String) {
+        guard let docDirURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { fatalError() }
+        let sectionURL = docDirURL.appendingPathComponent("Sections/\(sectionTitle)", isDirectory: true)
+        try? FileManager.default.removeItem(at: sectionURL)
+    }
+    
+}

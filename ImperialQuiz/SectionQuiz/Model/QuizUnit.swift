@@ -14,4 +14,10 @@ struct QuizUnit {
     let name: String
     let image: UIImage
     
+    init(sectionTitle: String = "", name: String, image: UIImage = UIImage(named: "Default")!) {
+        self.sectionTitle = sectionTitle
+        self.name = name
+        self.image = image
+    }
+    
 }

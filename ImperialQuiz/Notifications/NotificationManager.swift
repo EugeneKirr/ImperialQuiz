@@ -11,9 +11,11 @@ import UserNotifications
 
 class NotificationManager: NSObject {
     
-    let notificationCenter = UNUserNotificationCenter.current()
+    private let notificationCenter = UNUserNotificationCenter.current()
     
-    override init() {
+    static let shared = NotificationManager()
+    
+    private override init() {
         super.init()
         notificationCenter.delegate = self
     }
@@ -67,10 +69,27 @@ class NotificationManager: NSObject {
         
     }
     
-    func scheduleInstantLocalNotification(title: String, rating: Int) {
+    func scheduleTopRatingLocalNotification(title: String, rating: Int) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = "Congratulations!\nYou have new top rating: " + String(repeating: "★", count: rating)
+        content.sound = UNNotificationSound.default
+        content.attachments = {
+            guard let path = Bundle.main.path(forResource: "attachment", ofType: "png"),
+                  let attachment = try? UNNotificationAttachment(identifier: "Image", url: URL(fileURLWithPath: path), options: nil) else { return [UNNotificationAttachment]() }
+            return [attachment]
+        }()
+        
+        let identifier = "Local Notification"
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
+        notificationCenter.add(request, withCompletionHandler: nil)
+    }
+    
+    func scheduleNewSectionLocalNotification(title: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = "New section has been downloaded: " + title
         content.sound = UNNotificationSound.default
         content.attachments = {
             guard let path = Bundle.main.path(forResource: "attachment", ofType: "png"),
@@ -103,7 +122,6 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
         case "Delete": print("Delete")
         default: print("Unknown action")
         }
-        
         completionHandler()
     }
      

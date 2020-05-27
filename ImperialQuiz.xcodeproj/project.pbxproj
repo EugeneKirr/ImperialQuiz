@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B0A120C2462D86400B3FFED /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A120B2462D86400B3FFED /* Section.swift */; };
 		0B0DDC65246A9434002312DF /* SMImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DDC64246A9434002312DF /* SMImages.xcassets */; };
+		0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B143767247C1D97002806FB /* SectionListPlaceholder.xib */; };
+		0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143769247C238E002806FB /* SectionListPlaceholder.swift */; };
 		0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
 		0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306DB246A7CE300287CAF /* DetailsSections.swift */; };
@@ -22,6 +24,10 @@
 		0B74A5442467EA0100B0840E /* SectionDetailsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74A5432467EA0100B0840E /* SectionDetailsGalleryCell.swift */; };
 		0B74A5472467ECBA00B0840E /* SectionDetailsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74A5462467ECBA00B0840E /* SectionDetailsActionCell.xib */; };
 		0B74A5492467ED0500B0840E /* SectionDetailsActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74A5482467ED0500B0840E /* SectionDetailsActionCell.swift */; };
+		0B768B65247BA11D006C526F /* RawSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B64247BA11D006C526F /* RawSectionData.swift */; };
+		0B768B67247BA27F006C526F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B66247BA27F006C526F /* NetworkManager.swift */; };
+		0B768B6B247BAABC006C526F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B6A247BAABC006C526F /* NetworkErrors.swift */; };
+		0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B79E1AD247928CA0031702B /* NecronsImages.xcassets */; };
 		0B7CBA062463F58A00046569 /* ProjectCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CBA052463F58A00046569 /* ProjectCells.swift */; };
 		0B83CACC2462A8F3002986A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACB2462A8F3002986A0 /* AppDelegate.swift */; };
 		0B83CACE2462A8F3002986A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */; };
@@ -70,6 +76,8 @@
 		0B0A11F82462D40200B3FFED /* ImperialQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImperialQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A120B2462D86400B3FFED /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0B0DDC64246A9434002312DF /* SMImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMImages.xcassets; sourceTree = "<group>"; };
+		0B143767247C1D97002806FB /* SectionListPlaceholder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionListPlaceholder.xib; sourceTree = "<group>"; };
+		0B143769247C238E002806FB /* SectionListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListPlaceholder.swift; sourceTree = "<group>"; };
 		0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewDataSourceExtensions.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
 		0B2306DB246A7CE300287CAF /* DetailsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSections.swift; sourceTree = "<group>"; };
@@ -83,6 +91,10 @@
 		0B74A5432467EA0100B0840E /* SectionDetailsGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsGalleryCell.swift; sourceTree = "<group>"; };
 		0B74A5462467ECBA00B0840E /* SectionDetailsActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDetailsActionCell.xib; sourceTree = "<group>"; };
 		0B74A5482467ED0500B0840E /* SectionDetailsActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsActionCell.swift; sourceTree = "<group>"; };
+		0B768B64247BA11D006C526F /* RawSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSectionData.swift; sourceTree = "<group>"; };
+		0B768B66247BA27F006C526F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0B768B6A247BAABC006C526F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		0B79E1AD247928CA0031702B /* NecronsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NecronsImages.xcassets; sourceTree = "<group>"; };
 		0B7CBA052463F58A00046569 /* ProjectCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCells.swift; sourceTree = "<group>"; };
 		0B83CAC82462A8F3002986A0 /* ImperialQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImperialQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B83CACB2462A8F3002986A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 				0B83CAD42462A8F5002986A0 /* Assets.xcassets */,
 				0B0DDC64246A9434002312DF /* SMImages.xcassets */,
 				0B72E109246872E5008E387B /* OrksImages.xcassets */,
+				0B79E1AD247928CA0031702B /* NecronsImages.xcassets */,
 				0B83CAD62462A8F5002986A0 /* LaunchScreen.storyboard */,
 				0B83CAD92462A8F5002986A0 /* Info.plist */,
 			);
@@ -168,6 +181,15 @@
 				0BF60C4E2462EF4400C74E9E /* SectionManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0B143766247C1D61002806FB /* SectionListPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+				0B143767247C1D97002806FB /* SectionListPlaceholder.xib */,
+				0B143769247C238E002806FB /* SectionListPlaceholder.swift */,
+			);
+			path = SectionListPlaceholder;
 			sourceTree = "<group>";
 		};
 		0B72E10B2468740E008E387B /* Model */ = {
@@ -198,6 +220,15 @@
 			path = SectionDetailsActionCell;
 			sourceTree = "<group>";
 		};
+		0B768B63247BA0EA006C526F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0B768B64247BA11D006C526F /* RawSectionData.swift */,
+				0B768B66247BA27F006C526F /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		0B83CABF2462A8F3002986A0 = {
 			isa = PBXGroup;
 			children = (
@@ -218,11 +249,12 @@
 		0B83CACA2462A8F3002986A0 /* ImperialQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				0B90B1F22476738C0009651D /* Notifications */,
 				0BF60C56246309FF00C74E9E /* Enums */,
 				0BD614702465A55C00638E21 /* Protocols */,
 				0BA562132465567F009809E7 /* Extensions */,
 				0B0A12062462D4BE00B3FFED /* SupportingFiles */,
+				0B90B1F22476738C0009651D /* Notifications */,
+				0B768B63247BA0EA006C526F /* Networking */,
 				0B0A12072462D51C00B3FFED /* SectionList */,
 				0BC95AEF246580E000A23C2F /* SectionDetails */,
 				0BD6146324659D4100638E21 /* SectionQuiz */,
@@ -376,6 +408,7 @@
 			children = (
 				0B83CAD12462A8F3002986A0 /* SectionList.storyboard */,
 				0BFC18202465484500BC8695 /* SectionListCell */,
+				0B143766247C1D61002806FB /* SectionListPlaceholder */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +421,7 @@
 				0B4CA48F246C290A0004F165 /* ProjectCategories.swift */,
 				0B2306DB246A7CE300287CAF /* DetailsSections.swift */,
 				0B2306D9246A7CB100287CAF /* QuizSections.swift */,
+				0B768B6A247BAABC006C526F /* NetworkErrors.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -499,8 +533,10 @@
 				0BD6146924659E3200638E21 /* SectionQuiz.storyboard in Resources */,
 				0B74A5472467ECBA00B0840E /* SectionDetailsActionCell.xib in Resources */,
 				0BC95AF424658EC800A23C2F /* SectionDetails.storyboard in Resources */,
+				0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */,
 				0B2F82042477E11D00297693 /* attachment.png in Resources */,
 				0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */,
+				0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */,
 				0B74A5422467E9A900B0840E /* SectionDetailsGalleryCell.xib in Resources */,
 				0B83CAD32462A8F3002986A0 /* SectionList.storyboard in Resources */,
 				0BD614832466E0D200638E21 /* SectionQuizOptionCell.xib in Resources */,
@@ -530,13 +566,17 @@
 				0BA5621524655696009809E7 /* UIViewControllerExtensions.swift in Sources */,
 				0B0A120C2462D86400B3FFED /* Section.swift in Sources */,
 				0B83CACC2462A8F3002986A0 /* AppDelegate.swift in Sources */,
+				0B768B65247BA11D006C526F /* RawSectionData.swift in Sources */,
 				0BD614792465A99A00638E21 /* SectionDetailsDataProvider.swift in Sources */,
 				0BF60C5A24630D0E00C74E9E /* SectionListDataProvider.swift in Sources */,
 				0B74A5442467EA0100B0840E /* SectionDetailsGalleryCell.swift in Sources */,
+				0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */,
 				0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */,
 				0BD6146B2465A06200638E21 /* SectionQuizDataProvider.swift in Sources */,
 				0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */,
+				0B768B67247BA27F006C526F /* NetworkManager.swift in Sources */,
 				0BD614722465A59500638E21 /* NavigationDelegate.swift in Sources */,
+				0B768B6B247BAABC006C526F /* NetworkErrors.swift in Sources */,
 				0B83CACE2462A8F3002986A0 /* SceneDelegate.swift in Sources */,
 				0B72E10F246875AD008E387B /* QuizUnitManager.swift in Sources */,
 				0B74A5492467ED0500B0840E /* SectionDetailsActionCell.swift in Sources */,

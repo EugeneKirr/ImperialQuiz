@@ -51,4 +51,26 @@ extension UIViewController {
         present(ac, animated: true, completion: nil)
     }
     
+    func showDeleteAlert(title: String, completion: @escaping () -> Void) {
+        let ac = UIAlertController(title: "Delete section \(title)?", message: nil, preferredStyle: .alert)
+        let yes = UIAlertAction(title: "Yes", style: .destructive) { (_) in
+            completion()
+        }
+        let no = UIAlertAction(title: "No", style: .default, handler: nil)
+        ac.addAction(yes)
+        ac.addAction(no)
+        present(ac, animated: true, completion: nil)
+    }
+    
+}
+
+extension UIViewController {
+    
+    func showNetworkErrorAlert(_ error: NetworkErrors) {
+        let ac = UIAlertController(title: error.description, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(ok)
+        present(ac, animated: true, completion: nil)
+    }
+    
 }

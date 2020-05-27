@@ -21,6 +21,10 @@ class SectionQuizImageCell: UICollectionViewCell {
         timer?.invalidate()
     }
     
+    deinit {
+        timer?.invalidate()
+    }
+    
 }
 
 extension SectionQuizImageCell {

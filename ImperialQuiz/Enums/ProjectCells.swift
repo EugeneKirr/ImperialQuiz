@@ -11,6 +11,7 @@ import Foundation
 enum ProjectCells {
     
     case sectionListCell
+    case sectionListPlaceholder
     case sectionDetailsGalleryCell
     case sectionDetailsDescriptionCell
     case sectionDetailsActionCell
@@ -26,6 +27,7 @@ extension ProjectCells {
     var identifier: String {
         switch self {
         case .sectionListCell: return "sectionListCell"
+        case .sectionListPlaceholder: return "sectionListPlaceholder"
         case .sectionDetailsGalleryCell: return "sectionDetailsGalleryCell"
         case .sectionDetailsDescriptionCell: return "sectionDetailsDescriptionCell"
         case .sectionDetailsActionCell: return "sectionDetailsActionCell"
@@ -39,6 +41,7 @@ extension ProjectCells {
     var xibName: String {
         switch self {
         case .sectionListCell: return "SectionListCell"
+        case .sectionListPlaceholder: return "SectionListPlaceholder"
         case .sectionDetailsGalleryCell: return "SectionDetailsGalleryCell"
         case .sectionDetailsDescriptionCell: return "SectionDetailsDescriptionCell"
         case .sectionDetailsActionCell: return "SectionDetailsActionCell"

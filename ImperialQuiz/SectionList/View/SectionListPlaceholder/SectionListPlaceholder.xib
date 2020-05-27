@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionListPlaceholder" id="UGz-Hv-ed7" customClass="SectionListPlaceholder" customModule="ImperialQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZFe-NU-Qor">
+                <rect key="frame" x="0.0" y="0.0" width="279" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-JS-O8k">
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="120"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-8b-kcN">
+                        <rect key="frame" x="121" y="41.5" width="37" height="37"/>
+                        <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fab-JS-O8k" firstAttribute="leading" secondItem="ZFe-NU-Qor" secondAttribute="leading" id="1eL-3m-2OC"/>
+                    <constraint firstItem="H8P-8b-kcN" firstAttribute="centerX" secondItem="ZFe-NU-Qor" secondAttribute="centerX" id="7vb-eR-1hQ"/>
+                    <constraint firstItem="H8P-8b-kcN" firstAttribute="centerY" secondItem="ZFe-NU-Qor" secondAttribute="centerY" id="M3q-4o-Iyb"/>
+                    <constraint firstItem="Fab-JS-O8k" firstAttribute="top" secondItem="ZFe-NU-Qor" secondAttribute="top" id="Nag-YW-tuZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Fab-JS-O8k" secondAttribute="trailing" id="msN-aO-OTA"/>
+                    <constraint firstAttribute="bottom" secondItem="Fab-JS-O8k" secondAttribute="bottom" id="uiu-i6-tkO"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="279" height="120"/>
+            <connections>
+                <outlet property="activityIndicator" destination="H8P-8b-kcN" id="3cc-4w-5ZK"/>
+            </connections>
+            <point key="canvasLocation" x="-25.362318840579711" y="91.071428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Default" width="5120" height="2160"/>
+    </resources>
+</document>

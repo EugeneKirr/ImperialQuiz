@@ -18,6 +18,8 @@ class SectionListDataProvider: NSObject {
         return sectionManager.fetchSections()
     }
     
+    var isSectionRemovingActivated = false
+    
 }
 
 extension SectionListDataProvider: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -37,9 +39,17 @@ extension SectionListDataProvider: UICollectionViewDelegate, UICollectionViewDat
     // MARK: - Delegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.initializeAndPush(viewController: .sectionDetailsVC) { [weak self] (vc) in
-            guard let self = self, let detailsVC = vc as? SectionDetailsViewController else { return }
-            detailsVC.dataProvider.sectionOfInterest = self.currentSections[indexPath.row]
+        switch isSectionRemovingActivated {
+        case true:
+            delegate?.showDeleteAlert(title: currentSections[indexPath.row].title) { [weak self, weak collectionView] in
+                self?.sectionManager.deleteSection(at: indexPath.row)
+                collectionView?.deleteItems(at: [indexPath])
+            }
+        case false:
+            delegate?.initializeAndPush(viewController: .sectionDetailsVC) { [weak self] (vc) in
+                guard let self = self, let detailsVC = vc as? SectionDetailsViewController else { return }
+                detailsVC.dataProvider.sectionOfInterest = self.currentSections[indexPath.row]
+            }
         }
     }
     
@@ -53,3 +63,17 @@ extension SectionListDataProvider: UICollectionViewDelegateFlowLayout {
     
 }
 
+
+extension SectionListDataProvider {
+    
+    func createNewSection(from rawModel: RawSectionData, completion: @escaping () -> Void) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            let quizManager = QuizUnitManager()
+            quizManager.addNewQuizUnits(from: rawModel.units, for: rawModel.title)
+            self?.sectionManager.addNewSection(from: rawModel)
+            NotificationManager.shared.scheduleNewSectionLocalNotification(title: rawModel.title)
+            DispatchQueue.main.async { completion() }
+        }
+    }
+    
+}

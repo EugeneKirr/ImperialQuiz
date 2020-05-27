@@ -15,6 +15,7 @@ class QuizUnitManager {
     private enum DefaultSections: String {
         case spaceMarines = "Space Marines"
         case orks = "Orks"
+        case necrons = "Necrons"
     }
     
     private let smUnitNames = ["Alpha Legion", "Blood Angels", "Dark Angels", "Death Guard", "Emperor's Children", "Imperial Fists", "Iron Hands", "Iron Warriors", "Night Lords", "Raven Guard", "Salamanders", "Sons of Horus", "Space Wolves", "Thousand Sons", "Ultramarines", "White Scars", "Word Bearers", "World Eaters"]
@@ -23,30 +24,29 @@ class QuizUnitManager {
     private let orksUnitNames = ["Bad Moons", "Blood Axes", "Deathskulls", "Evil Sunz", "Goffs", "Snakebites"]
     private let orksImageNames = ["bad_moons", "blood_axes", "deathskulls", "evil_sunz", "goffs", "snakebites"]
     
+    private let necronsUnitNames = ["Sautekh", "Oruscar", "Oroskh", "Ogdobekh", "Nihilakh", "Nekthyst", "Charnovokh", "Atun", "Kardenath", "Mephrit", "Nephrekh", "Agdagath", "Arrynmarok", "Novokh", "Sekemtar", "Thokt", "Sarnekh"]
+    private let necronsImageNames = ["sautekh", "oruscar", "oroskh", "ogdobekh", "nihilakh", "nekthyst", "charnovokh", "atun", "kardenath", "mephrit", "nephrekh", "agdagath", "arrynmarok", "novokh", "sekemtar", "thokt", "sarnekh"]
+    
     private func prepareDefaultUnits(for sectionTitle: String) {
+        var preparedUnits = [QuizUnit]()
+        var unitNames = [String](), imageNames = [String]()
         switch sectionTitle {
-        case DefaultSections.spaceMarines.rawValue: quizUnits = generateSMUnits().shuffled()
-        case DefaultSections.orks.rawValue: quizUnits = generateOrksUnits().shuffled()
+        case DefaultSections.spaceMarines.rawValue:
+            unitNames = smUnitNames
+            imageNames = smImageNames
+        case DefaultSections.orks.rawValue:
+            unitNames = orksUnitNames
+            imageNames = orksImageNames
+        case DefaultSections.necrons.rawValue:
+            unitNames = necronsUnitNames
+            imageNames = necronsImageNames
         default: return
         }
-    }
-    
-    private func generateSMUnits() -> [QuizUnit] {
-        var fetchedUnits = [QuizUnit]()
-        for index in 0..<smUnitNames.count {
-            let quizUnit = QuizUnit(sectionTitle: "Space Marines", name: smUnitNames[index], image: UIImage(named: smImageNames[index])! )
-            fetchedUnits.append(quizUnit)
-        }
-        return fetchedUnits
-    }
-    
-    private func generateOrksUnits() -> [QuizUnit] {
-        var fetchedUnits = [QuizUnit]()
-        for index in 0..<orksUnitNames.count {
-            let quizUnit = QuizUnit(sectionTitle: "Orks", name: orksUnitNames[index], image: UIImage(named: orksImageNames[index])! )
-            fetchedUnits.append(quizUnit)
-        }
-        return fetchedUnits
+//        for index in 0..<unitNames.count {
+//            let quizUnit = QuizUnit(sectionTitle: sectionTitle, name: unitNames[index], image: UIImage(named: imageNames[index])! )
+//            preparedUnits.append(quizUnit)
+//        }
+        quizUnits = preparedUnits.shuffled()
     }
 
 }
@@ -92,6 +92,7 @@ extension QuizUnitManager {
 extension QuizUnitManager {
     
     private func saveQuizUnits(_ units: [QuizUnit], for sectionTitle: String) {
+        FileManager.default.createSectionDirectoriesIfNeeded(sectionTitle: sectionTitle)
         createImages(from: units, sectionTitle: sectionTitle)
         let dicts = createDictionaries(from: units)
         guard let plistData = try? PropertyListSerialization.data(fromPropertyList: dicts, format: .xml, options: .zero) else { fatalError() }
@@ -140,6 +141,36 @@ extension QuizUnitManager {
     
     func fetchRoundImage(quizRound: Int) -> UIImage {
         return quizUnits[quizRound].image
+    }
+    
+}
+
+extension QuizUnitManager {
+    
+    func addNewQuizUnits(from rawModels: [RawUnitData], for sectionTitle: String) {
+        for rawModel in rawModels {
+            let newUnit = QuizUnit(sectionTitle: sectionTitle, name: rawModel.name)
+            quizUnits.append(newUnit)
+//            guard let imageURL = URL(string: rawModel.image),
+//                  let imageData = try? Data(contentsOf: imageURL),
+//                  let image = UIImage(data: imageData) else { continue }
+//            let newUnit = QuizUnit(sectionTitle: sectionTitle, name: rawModel.name, image: image)
+//            units.append(newUnit)
+        }
+        saveQuizUnits(quizUnits, for: sectionTitle)
+    }
+    
+}
+
+extension QuizUnitManager {
+    
+    func deleteQuizUnits(for sectionTitle: String) {
+        prepareQuizUnits(for: sectionTitle)
+        for index in 0..<quizUnits.count {
+            guard quizUnits[index].sectionTitle == sectionTitle else { continue }
+            quizUnits.remove(at: index)
+        }
+        saveQuizUnits(quizUnits, for: sectionTitle)
     }
     
 }

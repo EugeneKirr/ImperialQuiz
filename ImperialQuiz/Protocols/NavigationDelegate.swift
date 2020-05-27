@@ -17,5 +17,7 @@ protocol NavigationDelegate: AnyObject {
     func popToRootVC()
     
     func showFinishAlert(newRating: Int)
+    
+    func showDeleteAlert(title: String, completion: @escaping () -> Void)
 
 }
