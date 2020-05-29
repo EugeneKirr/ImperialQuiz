@@ -33,7 +33,7 @@ class SectionListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells([.sectionListCell])
+        collectionView.register(SectionListCell.self)
         collectionView.delegate = dataProvider
         collectionView.dataSource = dataProvider
         dataProvider.delegate = self

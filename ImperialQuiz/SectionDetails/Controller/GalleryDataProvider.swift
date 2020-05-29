@@ -19,14 +19,15 @@ extension GalleryDataProvider: UICollectionViewDelegate, UICollectionViewDataSou
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {        
-        return configureReusableProjectCell(collectionView, indexPath, .galleryImageCell) { (cell: GalleryImageCell) in
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(GalleryImageCell.self, for: indexPath) { [images] cell in
             cell.galleryImageView.image = images[indexPath.row]
             switch indexPath.row {
             case 0: cell.galleryImageView.contentMode = .scaleAspectFit
             default: cell.galleryImageView.contentMode = .scaleAspectFill
             }
         }
+        
     }
     
 }

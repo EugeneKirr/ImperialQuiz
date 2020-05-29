@@ -46,15 +46,15 @@ extension SectionQuizImageCell {
         var timerCount = count
         timerLabel.text = ":\(timerCount)"
         print(timerCount)
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak timerLabel] timer in
             timerCount -= 1
             guard timerCount != 0 else {
-                self?.timerLabel.text = "Time is over"
+                timerLabel?.text = "Time is over"
                 timer.invalidate()
                 completion()
                 return
             }
-            self?.timerLabel.text = ":\(timerCount)"
+            timerLabel?.text = ":\(timerCount)"
             print(timerCount)
         }
     }

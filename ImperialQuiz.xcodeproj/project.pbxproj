@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B0A120C2462D86400B3FFED /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A120B2462D86400B3FFED /* Section.swift */; };
+		0B0B2A6A24801E9A00CDB5F1 /* VCInitializationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B2A6924801E9A00CDB5F1 /* VCInitializationDelegate.swift */; };
 		0B0DDC65246A9434002312DF /* SMImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DDC64246A9434002312DF /* SMImages.xcassets */; };
 		0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B143767247C1D97002806FB /* SectionListPlaceholder.xib */; };
 		0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143769247C238E002806FB /* SectionListPlaceholder.swift */; };
-		0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
 		0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306DB246A7CE300287CAF /* DetailsSections.swift */; };
 		0B2F82042477E11D00297693 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F82032477E11D00297693 /* attachment.png */; };
@@ -28,7 +28,6 @@
 		0B768B67247BA27F006C526F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B66247BA27F006C526F /* NetworkManager.swift */; };
 		0B768B6B247BAABC006C526F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B6A247BAABC006C526F /* NetworkErrors.swift */; };
 		0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B79E1AD247928CA0031702B /* NecronsImages.xcassets */; };
-		0B7CBA062463F58A00046569 /* ProjectCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CBA052463F58A00046569 /* ProjectCells.swift */; };
 		0B83CACC2462A8F3002986A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACB2462A8F3002986A0 /* AppDelegate.swift */; };
 		0B83CACE2462A8F3002986A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */; };
 		0B83CAD32462A8F3002986A0 /* SectionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B83CAD12462A8F3002986A0 /* SectionList.storyboard */; };
@@ -41,12 +40,13 @@
 		0BA5621524655696009809E7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */; };
 		0BBE4A6224671C2400A6E30A /* SectionQuizActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBE4A6124671C2300A6E30A /* SectionQuizActionCell.xib */; };
 		0BBE4A6424671CC700A6E30A /* SectionQuizActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE4A6324671CC700A6E30A /* SectionQuizActionCell.swift */; };
+		0BC1864E247FA476005A082D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1864D247FA476005A082D /* UICollectionViewExtensions.swift */; };
 		0BC95AF424658EC800A23C2F /* SectionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BC95AF324658EC800A23C2F /* SectionDetails.storyboard */; };
 		0BD6145E2465918200638E21 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6145D2465918200638E21 /* SectionDetailsViewController.swift */; };
 		0BD6146724659DFA00638E21 /* SectionQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6146624659DFA00638E21 /* SectionQuizViewController.swift */; };
 		0BD6146924659E3200638E21 /* SectionQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD6146824659E3200638E21 /* SectionQuiz.storyboard */; };
 		0BD6146B2465A06200638E21 /* SectionQuizDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6146A2465A06200638E21 /* SectionQuizDataProvider.swift */; };
-		0BD614722465A59500638E21 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD614712465A59500638E21 /* NavigationDelegate.swift */; };
+		0BD614722465A59500638E21 /* UIInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD614712465A59500638E21 /* UIInteractionDelegate.swift */; };
 		0BD614752465A68200638E21 /* SectionDetailsDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD614742465A68200638E21 /* SectionDetailsDescriptionCell.swift */; };
 		0BD614772465A6C500638E21 /* SectionDetailsDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD614762465A6C500638E21 /* SectionDetailsDescriptionCell.xib */; };
 		0BD614792465A99A00638E21 /* SectionDetailsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD614782465A99A00638E21 /* SectionDetailsDataProvider.swift */; };
@@ -57,7 +57,6 @@
 		0BD950002463259C0058CD72 /* SectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD94FFF2463259C0058CD72 /* SectionListCell.swift */; };
 		0BF60C4F2462EF4400C74E9E /* SectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60C4E2462EF4400C74E9E /* SectionManager.swift */; };
 		0BF60C54246304EA00C74E9E /* SectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60C53246304EA00C74E9E /* SectionListViewController.swift */; };
-		0BF60C5824630A1600C74E9E /* ProjectVCs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60C5724630A1600C74E9E /* ProjectVCs.swift */; };
 		0BF60C5A24630D0E00C74E9E /* SectionListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60C5924630D0E00C74E9E /* SectionListDataProvider.swift */; };
 		0BFC18222465485F00BC8695 /* SectionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC18212465485F00BC8695 /* SectionListCell.xib */; };
 /* End PBXBuildFile section */
@@ -75,10 +74,10 @@
 /* Begin PBXFileReference section */
 		0B0A11F82462D40200B3FFED /* ImperialQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImperialQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A120B2462D86400B3FFED /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0B0B2A6924801E9A00CDB5F1 /* VCInitializationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCInitializationDelegate.swift; sourceTree = "<group>"; };
 		0B0DDC64246A9434002312DF /* SMImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMImages.xcassets; sourceTree = "<group>"; };
 		0B143767247C1D97002806FB /* SectionListPlaceholder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionListPlaceholder.xib; sourceTree = "<group>"; };
 		0B143769247C238E002806FB /* SectionListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListPlaceholder.swift; sourceTree = "<group>"; };
-		0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewDataSourceExtensions.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
 		0B2306DB246A7CE300287CAF /* DetailsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSections.swift; sourceTree = "<group>"; };
 		0B2F82032477E11D00297693 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attachment.png; path = "../../../../../Desktop/ImperialQuiz Assets/Sources/attachment.png"; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		0B768B66247BA27F006C526F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0B768B6A247BAABC006C526F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		0B79E1AD247928CA0031702B /* NecronsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NecronsImages.xcassets; sourceTree = "<group>"; };
-		0B7CBA052463F58A00046569 /* ProjectCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCells.swift; sourceTree = "<group>"; };
 		0B83CAC82462A8F3002986A0 /* ImperialQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImperialQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B83CACB2462A8F3002986A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,12 +108,13 @@
 		0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0BBE4A6124671C2300A6E30A /* SectionQuizActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionQuizActionCell.xib; sourceTree = "<group>"; };
 		0BBE4A6324671CC700A6E30A /* SectionQuizActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionQuizActionCell.swift; sourceTree = "<group>"; };
+		0BC1864D247FA476005A082D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		0BC95AF324658EC800A23C2F /* SectionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SectionDetails.storyboard; sourceTree = "<group>"; };
 		0BD6145D2465918200638E21 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
 		0BD6146624659DFA00638E21 /* SectionQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionQuizViewController.swift; sourceTree = "<group>"; };
 		0BD6146824659E3200638E21 /* SectionQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SectionQuiz.storyboard; sourceTree = "<group>"; };
 		0BD6146A2465A06200638E21 /* SectionQuizDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionQuizDataProvider.swift; sourceTree = "<group>"; };
-		0BD614712465A59500638E21 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		0BD614712465A59500638E21 /* UIInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInteractionDelegate.swift; sourceTree = "<group>"; };
 		0BD614742465A68200638E21 /* SectionDetailsDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsDescriptionCell.swift; sourceTree = "<group>"; };
 		0BD614762465A6C500638E21 /* SectionDetailsDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDetailsDescriptionCell.xib; sourceTree = "<group>"; };
 		0BD614782465A99A00638E21 /* SectionDetailsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsDataProvider.swift; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 		0BD94FFF2463259C0058CD72 /* SectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListCell.swift; sourceTree = "<group>"; };
 		0BF60C4E2462EF4400C74E9E /* SectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionManager.swift; sourceTree = "<group>"; };
 		0BF60C53246304EA00C74E9E /* SectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListViewController.swift; sourceTree = "<group>"; };
-		0BF60C5724630A1600C74E9E /* ProjectVCs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVCs.swift; sourceTree = "<group>"; };
 		0BF60C5924630D0E00C74E9E /* SectionListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListDataProvider.swift; sourceTree = "<group>"; };
 		0BFC18212465485F00BC8695 /* SectionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA5621424655696009809E7 /* UIViewControllerExtensions.swift */,
-				0B2306D72469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift */,
+				0BC1864D247FA476005A082D /* UICollectionViewExtensions.swift */,
 				0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */,
 			);
 			path = Extensions;
@@ -362,7 +360,8 @@
 		0BD614702465A55C00638E21 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				0BD614712465A59500638E21 /* NavigationDelegate.swift */,
+				0BD614712465A59500638E21 /* UIInteractionDelegate.swift */,
+				0B0B2A6924801E9A00CDB5F1 /* VCInitializationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -370,8 +369,8 @@
 		0BD614732465A66400638E21 /* SectionDetailsDescriptionCell */ = {
 			isa = PBXGroup;
 			children = (
-				0BD614742465A68200638E21 /* SectionDetailsDescriptionCell.swift */,
 				0BD614762465A6C500638E21 /* SectionDetailsDescriptionCell.xib */,
+				0BD614742465A68200638E21 /* SectionDetailsDescriptionCell.swift */,
 			);
 			path = SectionDetailsDescriptionCell;
 			sourceTree = "<group>";
@@ -416,8 +415,6 @@
 		0BF60C56246309FF00C74E9E /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				0BF60C5724630A1600C74E9E /* ProjectVCs.swift */,
-				0B7CBA052463F58A00046569 /* ProjectCells.swift */,
 				0B4CA48F246C290A0004F165 /* ProjectCategories.swift */,
 				0B2306DB246A7CE300287CAF /* DetailsSections.swift */,
 				0B2306D9246A7CB100287CAF /* QuizSections.swift */,
@@ -429,8 +426,8 @@
 		0BFC18202465484500BC8695 /* SectionListCell */ = {
 			isa = PBXGroup;
 			children = (
-				0BD94FFF2463259C0058CD72 /* SectionListCell.swift */,
 				0BFC18212465485F00BC8695 /* SectionListCell.xib */,
+				0BD94FFF2463259C0058CD72 /* SectionListCell.swift */,
 			);
 			path = SectionListCell;
 			sourceTree = "<group>";
@@ -558,10 +555,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BF60C5824630A1600C74E9E /* ProjectVCs.swift in Sources */,
 				0BD6145E2465918200638E21 /* SectionDetailsViewController.swift in Sources */,
 				0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */,
 				0BD950002463259C0058CD72 /* SectionListCell.swift in Sources */,
+				0BC1864E247FA476005A082D /* UICollectionViewExtensions.swift in Sources */,
 				0BD614812466E0A400638E21 /* SectionQuizOptionCell.swift in Sources */,
 				0BA5621524655696009809E7 /* UIViewControllerExtensions.swift in Sources */,
 				0B0A120C2462D86400B3FFED /* Section.swift in Sources */,
@@ -572,10 +569,11 @@
 				0B74A5442467EA0100B0840E /* SectionDetailsGalleryCell.swift in Sources */,
 				0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */,
 				0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */,
+				0B0B2A6A24801E9A00CDB5F1 /* VCInitializationDelegate.swift in Sources */,
 				0BD6146B2465A06200638E21 /* SectionQuizDataProvider.swift in Sources */,
 				0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */,
 				0B768B67247BA27F006C526F /* NetworkManager.swift in Sources */,
-				0BD614722465A59500638E21 /* NavigationDelegate.swift in Sources */,
+				0BD614722465A59500638E21 /* UIInteractionDelegate.swift in Sources */,
 				0B768B6B247BAABC006C526F /* NetworkErrors.swift in Sources */,
 				0B83CACE2462A8F3002986A0 /* SceneDelegate.swift in Sources */,
 				0B72E10F246875AD008E387B /* QuizUnitManager.swift in Sources */,
@@ -585,14 +583,12 @@
 				0BD6147F2466DDA700638E21 /* SectionQuizImageCell.swift in Sources */,
 				0B88E94724680B8F00EE2CE2 /* GalleryDataProvider.swift in Sources */,
 				0B90B1F4247673A80009651D /* NotificationManager.swift in Sources */,
-				0B2306D82469BB2B00287CAF /* UICollectionViewDataSourceExtensions.swift in Sources */,
 				0BF60C54246304EA00C74E9E /* SectionListViewController.swift in Sources */,
 				0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */,
 				0BF60C4F2462EF4400C74E9E /* SectionManager.swift in Sources */,
 				0BD614752465A68200638E21 /* SectionDetailsDescriptionCell.swift in Sources */,
 				0B72E10D2468747C008E387B /* QuizUnit.swift in Sources */,
 				0B88E94C2468480F00EE2CE2 /* GalleryImageCell.swift in Sources */,
-				0B7CBA062463F58A00046569 /* ProjectCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

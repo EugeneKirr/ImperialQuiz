@@ -16,7 +16,9 @@ class SectionQuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells([.sectionQuizImageCell, .sectionQuizOptionCell, .sectionQuizActionCell])
+        [SectionQuizImageCell.self, SectionQuizOptionCell.self, SectionQuizActionCell.self].forEach {
+            collectionView.register($0)
+        }
         collectionView.delegate = dataProvider
         collectionView.dataSource = dataProvider
         dataProvider.delegate = self

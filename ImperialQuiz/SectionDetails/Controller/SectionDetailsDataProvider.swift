@@ -12,11 +12,11 @@ class SectionDetailsDataProvider: NSObject {
     
     var sectionOfInterest = Section(title: "")
     
-    weak var delegate: NavigationDelegate?
+    weak var delegate: UIInteractionDelegate?
     
 }
 
-extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionViewDataSource, VCInitializationDelegate {
     
     // MARK: - DataSource
     
@@ -37,15 +37,15 @@ extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionView
         let detailsSection = DetailsSections(indexPath.section)
         switch detailsSection {
         case .gallery:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionDetailsGalleryCell) { (cell: SectionDetailsGalleryCell) in
+            return collectionView.dequeueReusableCell(SectionDetailsGalleryCell.self, for: indexPath) { [sectionOfInterest] cell in
                 cell.dataProvider.images = sectionOfInterest.galleryImages
             }
         case .description:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionDetailsDescriptionCell) { (cell: SectionDetailsDescriptionCell) in
+            return collectionView.dequeueReusableCell(SectionDetailsDescriptionCell.self, for: indexPath) { [sectionOfInterest] cell in
                 cell.loadView(sectionOfInterest.title, sectionOfInterest.description)
             }
         case .actions:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionDetailsActionCell) { (cell: SectionDetailsActionCell) in
+            return collectionView.dequeueReusableCell(SectionDetailsActionCell.self, for: indexPath) { cell in
                 cell.actionLabel.text = "Start"
             }
         }
@@ -59,10 +59,9 @@ extension SectionDetailsDataProvider: UICollectionViewDelegate, UICollectionView
         switch detailsSection {
         case .gallery, .description: return
         case .actions:
-            delegate?.initializeAndPush(viewController: .sectionQuizVC) { [weak self] (vc) in
-                guard let self = self, let quizVC = vc as? SectionQuizViewController else { return }
-                quizVC.dataProvider.sectionTitle = self.sectionOfInterest.title
-            }
+            let vc = initializeViewController(SectionQuizViewController.self)
+            vc.dataProvider.sectionTitle = sectionOfInterest.title
+            delegate?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

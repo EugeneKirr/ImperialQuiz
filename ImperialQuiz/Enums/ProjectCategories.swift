@@ -9,8 +9,6 @@
 import Foundation
 
 enum ProjectCategories {
-    
     case sections
     case units
-    
 }

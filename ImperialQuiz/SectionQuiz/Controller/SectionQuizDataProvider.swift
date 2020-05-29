@@ -12,12 +12,13 @@ class SectionQuizDataProvider: NSObject {
     
     private let quizManager = QuizUnitManager()
     
-    weak var delegate: NavigationDelegate?
+    weak var delegate: UIInteractionDelegate?
     
     var sectionTitle = "" {
         didSet {
             quizManager.prepareQuizUnits(for: sectionTitle)
             (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
+            roundImage = quizManager.fetchRoundImage(quizRound: currentRound)
         }
     }
     
@@ -26,17 +27,20 @@ class SectionQuizDataProvider: NSObject {
     }
     var currentRound = 0 {
         didSet {
+            roundImage = nil
             guard currentRound < totalRounds else { return }
             (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
+            roundImage = quizManager.fetchRoundImage(quizRound: currentRound)
         }
     }
     var correctCount = 0
     var wrongCount = 0
     
-    var roundImage: UIImage {
-        return quizManager.fetchRoundImage(quizRound: currentRound)
-    }
+//    weak var roundImage: UIImage? {
+//        return quizManager.fetchRoundImage(quizRound: currentRound)
+//    }
     var roundOptions = [String]()
+    weak var roundImage: UIImage? = nil
     
     var validOptionIndex: Int?
     var chosenOptionIndex: Int?
@@ -79,17 +83,18 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
         let quizSection = QuizSections(indexPath.section)
         switch quizSection {
         case .image:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionQuizImageCell) { (cell: SectionQuizImageCell) in
-                cell.quizImageView.image = roundImage
-                cell.loadCounter(correct: correctCount, wrong: wrongCount, current: (currentRound + 1), total: totalRounds)
-                guard !isConfirmTapped else { return }
-                cell.startTimer(count: 20) { [weak self, weak collectionView] in
-                    self?.isConfirmTapped = true
+            return collectionView.dequeueReusableCell(SectionQuizImageCell.self, for: indexPath) { [weak self] cell in
+                guard let self = self else { return }
+                cell.quizImageView.image = self.roundImage
+                cell.loadCounter(correct: self.correctCount, wrong: self.wrongCount, current: (self.currentRound + 1), total: self.totalRounds)
+                guard !self.isConfirmTapped else { return }
+                cell.startTimer(count: 20) { [weak collectionView] in
+                    self.isConfirmTapped = true
                     collectionView?.reloadData()
                 }
             }
         case .options:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionQuizOptionCell) { (cell: SectionQuizOptionCell) in
+            return collectionView.dequeueReusableCell(SectionQuizOptionCell.self, for: indexPath) { [roundOptions, chosenOptionIndex, isConfirmTapped, validOptionIndex] cell in
                 cell.loadView((indexPath.row + 1), roundOptions[indexPath.row])
                 cell.isChosen = (indexPath.row == chosenOptionIndex)
                 if isConfirmTapped && cell.isChosen {
@@ -97,7 +102,7 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
                 }
             }
         case .confirm:
-            return configureReusableProjectCell(collectionView, indexPath, .sectionQuizActionCell) { (cell: SectionQuizActionCell) in
+            return collectionView.dequeueReusableCell(SectionQuizActionCell.self, for: indexPath) { [currentRound, totalRounds, isConfirmTapped] cell in
                 let actionLabel = currentRound < (totalRounds - 1) ? "Next" : "Finish"
                 cell.quizActionLabel.text = isConfirmTapped ? actionLabel : "Confirm"
             }
@@ -117,17 +122,14 @@ extension SectionQuizDataProvider: UICollectionViewDelegate, UICollectionViewDat
         case .confirm:
             guard (chosenOptionIndex != nil) || (isConfirmTapped) else { return }
             isConfirmTapped = !isConfirmTapped
-            guard currentRound < totalRounds else {
-                let sectionManager = SectionManager()
-                let newSectionRating = 5 * correctCount / totalRounds
-                sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle) { [weak self] in
-                    guard let self = self else { return }
-                    NotificationManager.shared.scheduleTopRatingLocalNotification(title: self.sectionTitle, rating: newSectionRating)
-                }
-                delegate?.showFinishAlert(newRating: newSectionRating)
-                return
+            guard currentRound == totalRounds else { collectionView.reloadData(); return }
+            let sectionManager = SectionManager()
+            let newSectionRating = 5 * correctCount / totalRounds
+            sectionManager.updateSectionRating(with: newSectionRating, sectionTitle: sectionTitle) { [sectionTitle] in
+                NotificationManager.shared.scheduleTopRatingLocalNotification(title: sectionTitle, rating: newSectionRating)
             }
-            collectionView.reloadData()
+            delegate?.showFinishAlert(newRating: newSectionRating)
+            return
         }
     }
     

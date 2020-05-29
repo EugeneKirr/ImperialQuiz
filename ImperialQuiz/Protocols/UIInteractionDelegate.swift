@@ -1,5 +1,5 @@
 //
-//  NavigationDelegate.swift
+//  UIInteractionDelegate.swift
 //  ImperialQuiz
 //
 //  Created by Eugene Kireichev on 08/05/2020.
@@ -8,16 +8,12 @@
 
 import UIKit
 
-protocol NavigationDelegate: AnyObject {
+protocol UIInteractionDelegate: AnyObject {
     
-    func initializeAndPush(viewController: ProjectVCs, completion: ((UIViewController) -> Void)? )
-    
-    func popToParentVC()
-    
-    func popToRootVC()
+    var navigationController: UINavigationController? { get }
     
     func showFinishAlert(newRating: Int)
     
     func showDeleteAlert(title: String, completion: @escaping () -> Void)
-
+    
 }

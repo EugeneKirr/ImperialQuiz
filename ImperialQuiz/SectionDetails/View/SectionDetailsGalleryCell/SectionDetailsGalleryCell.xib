@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryDataProvider" customModule="ImperialQuiz" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionDetailsGalleryCell" id="xO2-ur-mFO" customClass="SectionDetailsGalleryCell" customModule="ImperialQuiz" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="xO2-ur-mFO" customClass="SectionDetailsGalleryCell" customModule="ImperialQuiz" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="273" height="139"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rHA-IJ-YlH">
@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L9H-iq-q0g">
-                        <rect key="frame" x="0.0" y="0.0" width="273" height="131"/>
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="139"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Is-Vi-4Eh">
                             <size key="itemSize" width="50" height="50"/>
@@ -29,7 +29,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="L9H-iq-q0g" secondAttribute="trailing" id="Lsk-tt-a4d"/>
-                    <constraint firstAttribute="bottom" secondItem="L9H-iq-q0g" secondAttribute="bottom" constant="8" id="UVA-Qs-0qU"/>
+                    <constraint firstAttribute="bottom" secondItem="L9H-iq-q0g" secondAttribute="bottom" id="UVA-Qs-0qU"/>
                     <constraint firstItem="L9H-iq-q0g" firstAttribute="top" secondItem="rHA-IJ-YlH" secondAttribute="top" id="dTx-wQ-riN"/>
                     <constraint firstItem="L9H-iq-q0g" firstAttribute="leading" secondItem="rHA-IJ-YlH" secondAttribute="leading" id="tgM-5a-kNT"/>
                 </constraints>

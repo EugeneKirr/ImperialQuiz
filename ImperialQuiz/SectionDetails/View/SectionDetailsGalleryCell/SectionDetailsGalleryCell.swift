@@ -16,7 +16,7 @@ class SectionDetailsGalleryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        galleryView.register(UINib(nibName: ProjectCells.galleryImageCell.xibName, bundle: nil), forCellWithReuseIdentifier: ProjectCells.galleryImageCell.identifier)
+        galleryView.register(GalleryImageCell.self)
         galleryView.delegate = dataProvider
         galleryView.dataSource = dataProvider
     }

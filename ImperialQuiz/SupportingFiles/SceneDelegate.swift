@@ -8,18 +8,14 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, VCInitializationDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        let sb = UIStoryboard(name: ProjectVCs.sectionListVC.storyboardName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ProjectVCs.sectionListVC.vcIdentifier)
-        let navController = UINavigationController(rootViewController: vc)
-        
+        let navController = UINavigationController(rootViewController: initializeViewController(SectionListViewController.self))
         window?.rootViewController = navController
     }
 

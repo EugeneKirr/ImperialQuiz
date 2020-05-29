@@ -9,7 +9,7 @@
         <!--Section Details View Controller-->
         <scene sceneID="5wE-QS-yZv">
             <objects>
-                <viewController storyboardIdentifier="sectionDetailsViewController" id="zxV-pg-oPA" customClass="SectionDetailsViewController" customModule="ImperialQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SectionDetailsViewController" id="zxV-pg-oPA" customClass="SectionDetailsViewController" customModule="ImperialQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tp3-LC-IVF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

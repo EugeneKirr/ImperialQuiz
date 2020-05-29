@@ -16,7 +16,9 @@ class SectionDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells([.sectionDetailsGalleryCell, .sectionDetailsDescriptionCell, .sectionDetailsActionCell])
+        [SectionDetailsGalleryCell.self, SectionDetailsDescriptionCell.self, SectionDetailsActionCell.self].forEach {
+            collectionView.register($0)
+        }
         collectionView.delegate = dataProvider
         collectionView.dataSource = dataProvider
         dataProvider.delegate = self

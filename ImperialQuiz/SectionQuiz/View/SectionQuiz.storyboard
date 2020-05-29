@@ -9,7 +9,7 @@
         <!--Section Quiz View Controller-->
         <scene sceneID="Gba-Ph-f49">
             <objects>
-                <viewController storyboardIdentifier="sectionQuizViewController" id="JP1-wD-Jgg" customClass="SectionQuizViewController" customModule="ImperialQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SectionQuizViewController" id="JP1-wD-Jgg" customClass="SectionQuizViewController" customModule="ImperialQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="75W-SF-8oA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
