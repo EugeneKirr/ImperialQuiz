@@ -42,10 +42,10 @@ class QuizUnitManager {
             imageNames = necronsImageNames
         default: return
         }
-//        for index in 0..<unitNames.count {
-//            let quizUnit = QuizUnit(sectionTitle: sectionTitle, name: unitNames[index], image: UIImage(named: imageNames[index])! )
-//            preparedUnits.append(quizUnit)
-//        }
+        for index in 0..<unitNames.count {
+            let quizUnit = QuizUnit(sectionTitle: sectionTitle, name: unitNames[index], image: UIImage(named: imageNames[index])! )
+            preparedUnits.append(quizUnit)
+        }
         quizUnits = preparedUnits.shuffled()
     }
 

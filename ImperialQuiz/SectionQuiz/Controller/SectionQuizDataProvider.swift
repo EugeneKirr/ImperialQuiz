@@ -18,7 +18,6 @@ class SectionQuizDataProvider: NSObject {
         didSet {
             quizManager.prepareQuizUnits(for: sectionTitle)
             (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
-            roundImage = quizManager.fetchRoundImage(quizRound: currentRound)
         }
     }
     
@@ -27,20 +26,17 @@ class SectionQuizDataProvider: NSObject {
     }
     var currentRound = 0 {
         didSet {
-            roundImage = nil
             guard currentRound < totalRounds else { return }
             (roundOptions, validOptionIndex) = quizManager.fetchNewRoundOptions(quizRound: currentRound, numberOfOptions: 4)
-            roundImage = quizManager.fetchRoundImage(quizRound: currentRound)
         }
     }
     var correctCount = 0
     var wrongCount = 0
     
-//    weak var roundImage: UIImage? {
-//        return quizManager.fetchRoundImage(quizRound: currentRound)
-//    }
+    var roundImage: UIImage {
+        return quizManager.fetchRoundImage(quizRound: currentRound)
+    }
     var roundOptions = [String]()
-    weak var roundImage: UIImage? = nil
     
     var validOptionIndex: Int?
     var chosenOptionIndex: Int?

@@ -21,10 +21,10 @@ class SectionManager {
     
     
     private func fetchDefaultSections() -> [Section] {
-//        let orksSection = Section(title: "Orks", listImage: UIImage(named:"orks_list")!, description: orksDescription, galleryImages: orksImages, rating: 0)
-//        let smSection = Section(title: "Space Marines", listImage: UIImage(named:"sm_list")!, description: smDescription, galleryImages: smImages, rating: 0)
-//        let necronsSection = Section(title: "Necrons", listImage: UIImage(named: "necrons_list")!, description: necronsDescription, galleryImages: necronsImages, rating: 0)
-        return [Section]()
+        let orksSection = Section(title: "Orks", listImage: UIImage(named:"orks_list")!, description: orksDescription, galleryImages: orksImages, rating: 0)
+        let smSection = Section(title: "Space Marines", listImage: UIImage(named:"sm_list")!, description: smDescription, galleryImages: smImages, rating: 0)
+        let necronsSection = Section(title: "Necrons", listImage: UIImage(named: "necrons_list")!, description: necronsDescription, galleryImages: necronsImages, rating: 0)
+        return [orksSection, smSection, necronsSection]
     }
 
 }

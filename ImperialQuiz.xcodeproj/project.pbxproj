@@ -14,7 +14,7 @@
 		0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143769247C238E002806FB /* SectionListPlaceholder.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
 		0B2306DC246A7CE300287CAF /* DetailsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306DB246A7CE300287CAF /* DetailsSections.swift */; };
-		0B2F82042477E11D00297693 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F82032477E11D00297693 /* attachment.png */; };
+		0B3BC38E24811CCD00AFB528 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B3BC38D24811CCD00AFB528 /* attachment.png */; };
 		0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */; };
 		0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48F246C290A0004F165 /* ProjectCategories.swift */; };
 		0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B72E109246872E5008E387B /* OrksImages.xcassets */; };
@@ -80,7 +80,7 @@
 		0B143769247C238E002806FB /* SectionListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListPlaceholder.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
 		0B2306DB246A7CE300287CAF /* DetailsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSections.swift; sourceTree = "<group>"; };
-		0B2F82032477E11D00297693 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attachment.png; path = "../../../../../Desktop/ImperialQuiz Assets/Sources/attachment.png"; sourceTree = "<group>"; };
+		0B3BC38D24811CCD00AFB528 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment.png; sourceTree = "<group>"; };
 		0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 		0B4CA48F246C290A0004F165 /* ProjectCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCategories.swift; sourceTree = "<group>"; };
 		0B72E109246872E5008E387B /* OrksImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OrksImages.xcassets; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 		0B90B1F22476738C0009651D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				0B2F82032477E11D00297693 /* attachment.png */,
+				0B3BC38D24811CCD00AFB528 /* attachment.png */,
 				0B90B1F3247673A80009651D /* NotificationManager.swift */,
 			);
 			path = Notifications;
@@ -520,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3BC38E24811CCD00AFB528 /* attachment.png in Resources */,
 				0B83CAD82462A8F5002986A0 /* LaunchScreen.storyboard in Resources */,
 				0B88E94A2468479900EE2CE2 /* GalleryImageCell.xib in Resources */,
 				0B0DDC65246A9434002312DF /* SMImages.xcassets in Resources */,
@@ -531,7 +532,6 @@
 				0B74A5472467ECBA00B0840E /* SectionDetailsActionCell.xib in Resources */,
 				0BC95AF424658EC800A23C2F /* SectionDetails.storyboard in Resources */,
 				0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */,
-				0B2F82042477E11D00297693 /* attachment.png in Resources */,
 				0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */,
 				0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */,
 				0B74A5422467E9A900B0840E /* SectionDetailsGalleryCell.xib in Resources */,
