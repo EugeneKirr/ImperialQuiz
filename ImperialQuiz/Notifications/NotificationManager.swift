@@ -21,21 +21,18 @@ class NotificationManager: NSObject {
     }
     
     func requestAutorization() {
-        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, error) in
-            print("Permission granted: \(granted)")
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, _) in
             guard granted else { return }
             self?.getNotificationSettings()
         }
     }
     
     func getNotificationSettings() {
-        notificationCenter.getNotificationSettings { (settings) in
-            print("Notification settings: \(settings)")
+        notificationCenter.getNotificationSettings { _ in
         }
     }
     
     func scheduleLocalNotification(_ title: String, delay: TimeInterval) {
-        
         let userAction = "User Action"
         
         let content = UNMutableNotificationContent()
@@ -113,16 +110,13 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         guard response.notification.request.identifier == "Local Notification" else { return }
-        print("Handling notification with identifier - Local Notification")
-        
         switch response.actionIdentifier {
-        case UNNotificationDefaultActionIdentifier: print("Default")
-        case UNNotificationDismissActionIdentifier: print("Dismiss")
-        case "Snooze": print("Snooze"); scheduleLocalNotification("Reminder", delay: 5)
-        case "Delete": print("Delete")
-        default: print("Unknown action")
+        case UNNotificationDefaultActionIdentifier: completionHandler()
+        case UNNotificationDismissActionIdentifier: completionHandler()
+        case "Snooze": scheduleLocalNotification("Reminder", delay: 5)
+        case "Delete": completionHandler()
+        default: fatalError("Unknow notification action")
         }
-        completionHandler()
     }
      
 }

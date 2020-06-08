@@ -38,6 +38,7 @@ class SectionListViewController: UIViewController {
         collectionView.dataSource = dataProvider
         dataProvider.delegate = self
         configureNavBar()
+        fetchDefaultSectionAtFirstLaunch("Orks")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,6 +117,28 @@ extension SectionListViewController {
         cancel.setValue(UIImage(systemName: "xmark"), forKey: "image")
         ac.addAction(cancel)
         present(ac, animated: true, completion: nil)
+    }
+    
+}
+
+extension SectionListViewController {
+    
+    func fetchDefaultSectionAtFirstLaunch(_ defaultSectionTitle: String) {
+        let firstLaunchFlag = UserDefaults.standard.object(forKey: UDKeys.isFirstLaunchHappened.key)
+        guard firstLaunchFlag == nil || firstLaunchFlag as? Bool == false else { return }
+        networkManager.fetchRawSectionData { [weak self] result in
+            switch result {
+            case .success(let rawModels):
+                guard let defaultSectionRawData = rawModels.first(where: { $0.title == defaultSectionTitle }) else { fatalError("No Such Section Available") }
+                self?.isDownloadingInProgress = true
+                self?.dataProvider.createNewSection(from: defaultSectionRawData) {
+                    self?.isDownloadingInProgress = false
+                    self?.collectionView.reloadData()
+                    UserDefaults.standard.set(true, forKey: UDKeys.isFirstLaunchHappened.key)
+                }
+            case .failure(let networkError): self?.showNetworkErrorAlert(networkError)
+            }
+        }
     }
     
 }

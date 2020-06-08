@@ -45,7 +45,6 @@ extension SectionQuizImageCell {
     func startTimer(count: Int, completion: @escaping () -> Void) {
         var timerCount = count
         timerLabel.text = ":\(timerCount)"
-        print(timerCount)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak timerLabel] timer in
             timerCount -= 1
             guard timerCount != 0 else {
@@ -55,7 +54,6 @@ extension SectionQuizImageCell {
                 return
             }
             timerLabel?.text = ":\(timerCount)"
-            print(timerCount)
         }
     }
     

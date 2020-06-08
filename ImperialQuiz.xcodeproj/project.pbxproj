@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B0A120C2462D86400B3FFED /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A120B2462D86400B3FFED /* Section.swift */; };
 		0B0B2A6A24801E9A00CDB5F1 /* VCInitializationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B2A6924801E9A00CDB5F1 /* VCInitializationDelegate.swift */; };
-		0B0DDC65246A9434002312DF /* SMImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0DDC64246A9434002312DF /* SMImages.xcassets */; };
+		0B0E193B248E4F940094CF1E /* UDKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E193A248E4F940094CF1E /* UDKeys.swift */; };
 		0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B143767247C1D97002806FB /* SectionListPlaceholder.xib */; };
 		0B14376A247C238E002806FB /* SectionListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143769247C238E002806FB /* SectionListPlaceholder.swift */; };
 		0B2306DA246A7CB200287CAF /* QuizSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2306D9246A7CB100287CAF /* QuizSections.swift */; };
@@ -17,7 +17,6 @@
 		0B3BC38E24811CCD00AFB528 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B3BC38D24811CCD00AFB528 /* attachment.png */; };
 		0B4CA48E246C283A0004F165 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */; };
 		0B4CA490246C290A0004F165 /* ProjectCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CA48F246C290A0004F165 /* ProjectCategories.swift */; };
-		0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B72E109246872E5008E387B /* OrksImages.xcassets */; };
 		0B72E10D2468747C008E387B /* QuizUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72E10C2468747C008E387B /* QuizUnit.swift */; };
 		0B72E10F246875AD008E387B /* QuizUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72E10E246875AD008E387B /* QuizUnitManager.swift */; };
 		0B74A5422467E9A900B0840E /* SectionDetailsGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74A5412467E9A900B0840E /* SectionDetailsGalleryCell.xib */; };
@@ -27,7 +26,6 @@
 		0B768B65247BA11D006C526F /* RawSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B64247BA11D006C526F /* RawSectionData.swift */; };
 		0B768B67247BA27F006C526F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B66247BA27F006C526F /* NetworkManager.swift */; };
 		0B768B6B247BAABC006C526F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B768B6A247BAABC006C526F /* NetworkErrors.swift */; };
-		0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B79E1AD247928CA0031702B /* NecronsImages.xcassets */; };
 		0B83CACC2462A8F3002986A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACB2462A8F3002986A0 /* AppDelegate.swift */; };
 		0B83CACE2462A8F3002986A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */; };
 		0B83CAD32462A8F3002986A0 /* SectionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B83CAD12462A8F3002986A0 /* SectionList.storyboard */; };
@@ -75,7 +73,7 @@
 		0B0A11F82462D40200B3FFED /* ImperialQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImperialQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A120B2462D86400B3FFED /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0B0B2A6924801E9A00CDB5F1 /* VCInitializationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCInitializationDelegate.swift; sourceTree = "<group>"; };
-		0B0DDC64246A9434002312DF /* SMImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMImages.xcassets; sourceTree = "<group>"; };
+		0B0E193A248E4F940094CF1E /* UDKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDKeys.swift; sourceTree = "<group>"; };
 		0B143767247C1D97002806FB /* SectionListPlaceholder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionListPlaceholder.xib; sourceTree = "<group>"; };
 		0B143769247C238E002806FB /* SectionListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListPlaceholder.swift; sourceTree = "<group>"; };
 		0B2306D9246A7CB100287CAF /* QuizSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSections.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 		0B3BC38D24811CCD00AFB528 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment.png; sourceTree = "<group>"; };
 		0B4CA48D246C283A0004F165 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 		0B4CA48F246C290A0004F165 /* ProjectCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCategories.swift; sourceTree = "<group>"; };
-		0B72E109246872E5008E387B /* OrksImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OrksImages.xcassets; sourceTree = "<group>"; };
 		0B72E10C2468747C008E387B /* QuizUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizUnit.swift; sourceTree = "<group>"; };
 		0B72E10E246875AD008E387B /* QuizUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizUnitManager.swift; sourceTree = "<group>"; };
 		0B74A5412467E9A900B0840E /* SectionDetailsGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDetailsGalleryCell.xib; sourceTree = "<group>"; };
@@ -93,7 +90,6 @@
 		0B768B64247BA11D006C526F /* RawSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSectionData.swift; sourceTree = "<group>"; };
 		0B768B66247BA27F006C526F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0B768B6A247BAABC006C526F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		0B79E1AD247928CA0031702B /* NecronsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NecronsImages.xcassets; sourceTree = "<group>"; };
 		0B83CAC82462A8F3002986A0 /* ImperialQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImperialQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B83CACB2462A8F3002986A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,9 +149,6 @@
 				0B83CACB2462A8F3002986A0 /* AppDelegate.swift */,
 				0B83CACD2462A8F3002986A0 /* SceneDelegate.swift */,
 				0B83CAD42462A8F5002986A0 /* Assets.xcassets */,
-				0B0DDC64246A9434002312DF /* SMImages.xcassets */,
-				0B72E109246872E5008E387B /* OrksImages.xcassets */,
-				0B79E1AD247928CA0031702B /* NecronsImages.xcassets */,
 				0B83CAD62462A8F5002986A0 /* LaunchScreen.storyboard */,
 				0B83CAD92462A8F5002986A0 /* Info.plist */,
 			);
@@ -419,6 +412,7 @@
 				0B2306DB246A7CE300287CAF /* DetailsSections.swift */,
 				0B2306D9246A7CB100287CAF /* QuizSections.swift */,
 				0B768B6A247BAABC006C526F /* NetworkErrors.swift */,
+				0B0E193A248E4F940094CF1E /* UDKeys.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -523,7 +517,6 @@
 				0B3BC38E24811CCD00AFB528 /* attachment.png in Resources */,
 				0B83CAD82462A8F5002986A0 /* LaunchScreen.storyboard in Resources */,
 				0B88E94A2468479900EE2CE2 /* GalleryImageCell.xib in Resources */,
-				0B0DDC65246A9434002312DF /* SMImages.xcassets in Resources */,
 				0BBE4A6224671C2400A6E30A /* SectionQuizActionCell.xib in Resources */,
 				0BFC18222465485F00BC8695 /* SectionListCell.xib in Resources */,
 				0BD6147D2466DD6000638E21 /* SectionQuizImageCell.xib in Resources */,
@@ -531,8 +524,6 @@
 				0BD6146924659E3200638E21 /* SectionQuiz.storyboard in Resources */,
 				0B74A5472467ECBA00B0840E /* SectionDetailsActionCell.xib in Resources */,
 				0BC95AF424658EC800A23C2F /* SectionDetails.storyboard in Resources */,
-				0B79E1AE247928CA0031702B /* NecronsImages.xcassets in Resources */,
-				0B72E10A246872E5008E387B /* OrksImages.xcassets in Resources */,
 				0B143768247C1D97002806FB /* SectionListPlaceholder.xib in Resources */,
 				0B74A5422467E9A900B0840E /* SectionDetailsGalleryCell.xib in Resources */,
 				0B83CAD32462A8F3002986A0 /* SectionList.storyboard in Resources */,
@@ -588,6 +579,7 @@
 				0BF60C4F2462EF4400C74E9E /* SectionManager.swift in Sources */,
 				0BD614752465A68200638E21 /* SectionDetailsDescriptionCell.swift in Sources */,
 				0B72E10D2468747C008E387B /* QuizUnit.swift in Sources */,
+				0B0E193B248E4F940094CF1E /* UDKeys.swift in Sources */,
 				0B88E94C2468480F00EE2CE2 /* GalleryImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

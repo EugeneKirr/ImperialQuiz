@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="142" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orks_gallery_3" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-iE-Emq">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-iE-Emq">
                         <rect key="frame" x="0.0" y="0.0" width="142" height="127"/>
                     </imageView>
                 </subviews>
@@ -35,6 +35,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="orks_gallery_3" width="433" height="600"/>
+        <image name="Default" width="640" height="270"/>
     </resources>
 </document>
